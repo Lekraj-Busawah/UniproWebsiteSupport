@@ -3,6 +3,7 @@ Cypress.on('uncaught:exception', (err, runnable) => {
   });
 
 //https://www.unipro.io/
+//test changement 
 it('load Home page',() => {
     cy.visit('https://www.unipro.io/', {timeout: 40000});
     cy.get('footer').scrollIntoView({ duration: 3000 })
