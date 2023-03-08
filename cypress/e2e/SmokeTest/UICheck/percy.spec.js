@@ -12,7 +12,7 @@ beforeEach(() => {
 describe('Visuals', () => {
   it('Homepage compare', () => {
     cy.visit('https://www.unipro.io')
-    cy.get('.iubenda-cs-accept-btn').click()
+    cy.xpath('/html/body/div[3]/div/div/div/div[3]/div[2]/button').should('be.visible').click()
     cy.get('footer').scrollIntoView({ duration: 3000 })
     cy.wait(10000)
     // Take a snapshot for visual diffing
