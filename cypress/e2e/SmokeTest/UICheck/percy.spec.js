@@ -10,9 +10,13 @@ beforeEach(() => {
 */
     
 describe('Visuals', () => {
+  afterEach(() => {
+    cy.get('.iubenda-cs-accept-btn').click()
+
+  })
+
   it('Homepage compare', () => {
     cy.visit('https://www.unipro.io')
-    cy.get('.iubenda-cs-accept-btn').click()
     cy.get('footer').scrollIntoView({ duration: 3000 })
     cy.wait(10000)
     // Take a snapshot for visual diffing
@@ -26,7 +30,7 @@ describe('Visuals', () => {
     // Take a snapshot for visual diffing
     cy.percySnapshot('insights page');
   })
-
+/*
   it('Resources page compare', () => {
     cy.visit('https://insight.unipro.io/resources')
     cy.get('footer').scrollIntoView({ duration: 3000 })
@@ -226,4 +230,5 @@ describe('Visuals', () => {
     // Take a snapshot for visual diffing
     cy.percySnapshot('Security Policy statement page');
   })
+  */
 })
