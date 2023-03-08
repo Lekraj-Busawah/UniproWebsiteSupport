@@ -62,7 +62,7 @@ describe('Visuals', () => {
     // Take a snapshot for visual diffing
     cy.percySnapshot('careers page');
   }) 
-/*
+
   it('Careers Mauritius compare', () => {
     cy.visit('https://www.unipro.io/careers-mauritius')
     cy.get('footer').scrollIntoView({ duration: 3000 })
@@ -230,5 +230,4 @@ describe('Visuals', () => {
     // Take a snapshot for visual diffing
     cy.percySnapshot('Security Policy statement page');
   })
-  */
 })
