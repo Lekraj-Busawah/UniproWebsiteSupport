@@ -12,14 +12,13 @@ beforeEach(() => {
 describe('Visuals', () => {
   it('Homepage compare', () => {
     cy.visit('https://www.unipro.io')
-    // accept cookie
     cy.get('.iubenda-cs-accept-btn').click()
     cy.get('footer').scrollIntoView({ duration: 3000 })
     cy.wait(10000)
     // Take a snapshot for visual diffing
     cy.percySnapshot('homepage');
   })
-/*
+
   it('Insights page compare', () => {
     cy.visit('https://insight.unipro.io')
     cy.get('footer').scrollIntoView({ duration: 3000 })
@@ -227,5 +226,4 @@ describe('Visuals', () => {
     // Take a snapshot for visual diffing
     cy.percySnapshot('Security Policy statement page');
   })
-  */
 })
