@@ -1,8 +1,8 @@
 const { defineConfig } = require('cypress')
 
 module.exports = defineConfig({
-  viewportWidth: 1920,
-  viewportHeight: 1080,
+  viewportWidth: 1024,
+  viewportHeight: 764,
   projectId: 'yng4ph',
   e2e: {
     // We've imported your old cypress plugins here.
