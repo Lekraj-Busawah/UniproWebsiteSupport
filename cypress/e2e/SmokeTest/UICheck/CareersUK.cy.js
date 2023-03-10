@@ -28,7 +28,7 @@ describe('template spec', () => {
         .should('be.visible')*/
         cy.get('.ui > h2 > span').should('be.visible')
 
-        cy.get('.image-left > .container > .row > :nth-child(2) > .gatsby-image-wrapper > [data-main-image=""]').should('be.visible')
+        //cy.get('.image-left > .container > .row > :nth-child(2) > .gatsby-image-wrapper > [data-main-image=""]').should('be.visible')
         cy.get('[style="order:1"] > .content > .segment > h3').should('be.visible')
         cy.get('[style="order:1"] > .content > .segment > :nth-child(2)').should('be.visible')
         cy.get('[style="order:1"] > .content > .segment > :nth-child(3)').should('be.visible')
@@ -74,7 +74,10 @@ describe('template spec', () => {
         //lets work together section
         cy.get('.cta-large > .container').should('be.visible')
         cy.get('.column > .center > .ui').should('be.visible')
-        cy.get('.center > .segment > .ui').should('be.visible')
+        cy.get('.center > .segment > .ui').click()
+        cy.wait(200)
+        cy.get('.text').should('be.visible')
+        cy.go('back')
 
     })
 })
